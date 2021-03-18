@@ -2,20 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" ></script>
     <title>maquette reservia</title>
   </head>
 
   <body>
+    <!--header-->
     <header class="header">
-      <img class="imgheader" src="images/logo/Reservia@3x.png" alt="reservia"/>
-      <ul class="menu">
-        <li class="menuheader"><a href="#hosting">hebergements</a></li>
-        <li class="menuheader"><a href="#activity">activités</a></li>
-        <li class="menuheader"><a href="#" style="color:#0065FC">s'inscrire</a></li>
-      </ul>
-      </header>
+    <nav class="headernav">
+      <img class="headerimg" src="images/logo/Reservia.svg" alt="logoReservia">
+     <a class="headernavLink" href="#hosting" data-active="true">Hébergements</a>
+     <a class="headernavLink" href="#activity" data-active="false">Activités</a>
+     <a class="headersignup" href="#">S'inscrire</a>
+   </nav>
+ </header>
       <main class="main">
       <section class="searchfield">
         <!--champ recherche-->
@@ -28,7 +30,10 @@
             <i class="fas fa-map-marker-alt headericone"></i>
           </div>
         <input class="searchinput" type="search" placeholder="Marseille, France" size="1">
-        <button class="searchbutton">Rechercher</button>
+        <button class="searchbutton">
+          <span class="searchbuttontext">Rechercher</span>
+          <i class="searchbuttonicon fas fa-search"></i>
+        </button>
         </div>
         <div class="searchfilters">
           <h3 class="searchfilterstitle"> Filtres</h3>

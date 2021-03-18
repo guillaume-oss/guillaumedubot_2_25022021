@@ -1,46 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 body{
-  font-family: "raleway",sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-
 a{
   color: inherit;
   text-decoration: none;
 }
 /*en-tête*/
-.header{
-  max-width: 1440px;
-  margin: auto;
+.header {
+      max-width: 1440px;
+      margin: auto;
 }
-.imgheader{
-  padding: 0 2rem;
-  height: 2.813rem;
-  margin-top: 50px;
+.headerimg {
+justify-content: flex-start;
+padding: 0 2rem;
+height: 2.83rem;
+padding-top: 40px;
 }
-
-
-.menu{
-  display: inline-flex;
-  list-style: none;
-
+.headernav {
+  align-items: center;
+  display: grid;
+  grid-template-columns:  1fr repeat(3, 150px);
 }
-ul{
-  float: right;
-  margin-top: 50px;
-
+.headernavLink{
+  margin: 1rem;
+padding-top: 50px;
 }
-li a{
-  color:grey;
-text-decoration: none;
-  margin-right: 40px;
-}
-.menuheader a:hover{
+.headernavLink[data-active=true] {
   color: #0065FC;
-  border-top: 2px  solid;
-  padding-top: 50px;
 }
-.p{
-  color: grey;
+.headernavLink[data-active=false]{
+  color:grey;
 }
+.headernavLink:hover{
+  padding-top: 48px;
+    color: #0065fc;
+    border-top: 2px solid ;
+}
+.headersignup {
+ align-items: center;
+ margin-top: 50px;
+ color: #0065FC;
+ font-weight: bold;
+  }
+
 .main{
   max-width: 1440px;
   margin: auto;
@@ -71,6 +74,9 @@ height: 50px;
   box-sizing: border-box;
   width: 14rem;
   font-weight: bold;
+}
+.searchbuttonicon{
+  color: #0065FC;
 }
 .searchbutton{
   background-color:  #0065FC;
@@ -104,7 +110,8 @@ height: 50px;
   font-weight: bold;
 }
 .searchfiltersfilter:hover{
-  background-color: gold;
+  background-color: brown;
+  text-shadow: 0.1em 0.1em blue;
   transform: scale(1.5);
 }
 .searchicone{
@@ -330,4 +337,127 @@ background-color: white;
 .footerline{
   padding-bottom: 0.5rem;
   display: block;
+}
+
+/*phone_header*/
+@media screen and (max-width: 700px){
+  .headernav {
+  display: grid;
+   grid-template-columns: auto 1fr ;
+}
+.headerimg{
+  order: 0;
+  padding-left: 1rem;
+}
+.headersignup{
+  order: 1;
+  justify-self: end;
+  padding-right: 1rem;
+}
+.headernavLink{
+  order: 2;
+  margin-right: 5rem;
+  padding-top: 1rem;
+}
+.headernavLink {
+    border-top: none;
+    border-bottom: 3px solid #F2F2F2;
+    width: 50%;
+  }
+  .headernavLink[data-active=true] {
+    border-bottom-color: #0065FC;
+  }
+  .headernavLink:hover {
+    border-bottom-color: #0065FC;
+  }
+}
+/*phone_search*/
+@media screen and (max-width: 700px) {
+  .search {
+    display: flex;
+    width: 100%;
+  }
+  .searchinput {
+    flex: 1;
+  }
+  .searchbuttontext{
+    display: none;
+  }
+  .headericone {
+    display: block;
+  }
+  .searchfilterstitle {
+    width: 100%;
+  }
+  .searchfiltersfilter {
+    margin-right: 1rem;
+  }
+  .searchbutton {
+    display: block;
+  }
+  .searchbuttonicon{
+    color: white;
+  }
+}
+/*phone_hostingpopular*/
+@media screen and (max-width: 700px) {
+  .hosting{
+    width: 355px;
+    grid-template-columns:1fr;
+    row-gap: 1rem;
+  }
+  .hostingpopular {
+    border-radius: 0%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 10rem;
+    column-gap: 2rem;
+    grid-row-start: 1;
+  }
+  .hostingpopulartitle {
+    grid-column: 1/-1;
+  }
+}
+/*phone_hostingmain*/
+@media screen and (max-width: 700px){
+  .hostingmain {
+    background-color: inherit;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hostingmain {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hostingmain {
+    grid-template-columns: 1fr;
+  }
+}
+/*phone_hostingpopular*/
+@media screen and (max-width: 700px){
+  .hostingpopular {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(3, 8rem);
+  }
+}
+/*phone_ativités*/
+@media screen and (max-width:700px){
+  .activity {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+  .activitycatalog{
+    height: 150px;
+  }
+}
+/*phone_footer*/
+@media screen and (max-width: 700px){
+  .footercolumn {
+    display: flex;
+     flex-direction: column;
+     padding: 2rem;
+   }
+   .footercolumnmore {
+     width: 100%;
+     padding: 0;
+     margin: 0;
+   }
 }
