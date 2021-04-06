@@ -123,6 +123,7 @@ height: 50px;
   display: flex;
   justify-content: center;
   margin: -2px;
+  align-items: center;
 }
 .searchfilterstitletitle{
   margin: 0 0.5rem;
